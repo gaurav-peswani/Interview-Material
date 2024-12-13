@@ -37,7 +37,7 @@ class TrackedEntityService:
         for tracked_entity in all_tracked_entities:
             heirarchy = tracked_entity.hierarchy
             if self.__is_matching_tags(tags, heirarchy):
-                prefix_entities.append(heirarchy)
+                prefix_entities.append(tracked_entity)
 
         return prefix_entities
 

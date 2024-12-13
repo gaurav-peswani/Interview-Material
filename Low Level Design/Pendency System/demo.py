@@ -10,7 +10,7 @@ class Demo:
 
     @staticmethod
     def run() -> None:
-        print("Pendency System initialized...")
+        print("Pendency System initialized...\n")
         pendency_system = PendencySystem.get_instance()
 
         upi = Instrument(1, "UPI")
@@ -54,16 +54,19 @@ class Demo:
         pendency_system.start_tracking(tracked_entity_1221)
 
         # Case 1:
+        print("\nCase I:\n")
         print(f"Output: {pendency_system.get_counts(["UPI"])}")
         print(f"Output: {pendency_system.get_counts(["UPI", "Karnataka"])}")
         print(f"Output: {pendency_system.get_counts(["UPI", "Karnataka", "Bangalore"])}")
         print(f"Output: {pendency_system.get_counts(["Bangalore"])}")
 
+        print()
         pendency_system.start_tracking(tracked_entity_4221)
         pendency_system.stop_tracking(1112)
         pendency_system.stop_tracking(2451)
 
         # Case 2:
+        print("\nCase II:\n")
         print(f"Output: {pendency_system.get_counts(["UPI"])}")
         print(f"Output: {pendency_system.get_counts(["Wallet"])}")
         print(f"Output: {pendency_system.get_counts(["UPI", "Karnataka", "Bangalore"])}")

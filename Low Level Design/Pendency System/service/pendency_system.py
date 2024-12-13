@@ -27,7 +27,8 @@ class PendencySystem:
         self.tracked_entity_service.add_tracked_entity(tracked_entity)
         for entity in tracked_entity.hierarchy:
             self.entity_service.add_entity(entity)
-        print(f"Entity {tracked_entity.id} has been added to the DB for tracking.")
+        print(f"Entity {tracked_entity.id} with entity tags: {[ent.tag for ent in tracked_entity.hierarchy]} "
+              f"has been added to the DB for tracking.")
 
     def stop_tracking(self, tracking_entity_id: int) -> None:
         self.tracked_entity_service.remove_tracked_entity(tracking_entity_id)

@@ -21,7 +21,7 @@ class TrackedEntity:
         self._id = value
 
     def add_to_hierarchy(self, entity: Entity) -> None:
-        print(f"Added entity with id: {entity.id}, tag: {entity.tag} into tracked entity heirarchy {self._id}.")
+        # print(f"Added entity with id: {entity.id}, tag: {entity.tag} into tracked entity heirarchy {self._id}.")
         self._hierarchy.append(entity)
 
     def remove_from_hierarchy(self, entity_id: int) -> None:
