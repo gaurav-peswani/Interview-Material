@@ -1,0 +1,6 @@
+class OrderStatus:
+
+    PENDING = "PENDING"
+    CONFIRMED = "CONFIRMED"
+    PICKED_UP = "PICKED_UP"
+    COMPLETED = "COMPLETED"

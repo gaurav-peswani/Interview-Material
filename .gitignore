@@ -51,3 +51,4 @@ docs/_build/
 
 # Editor specifications
 .vscode
+.idea
